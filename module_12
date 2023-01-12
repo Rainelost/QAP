@@ -1,0 +1,5 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+money = float(input("Введите количество средств:"))/100
+deposit = [round(per_cent['ТКБ']*money), round(per_cent['СКБ']*money), round(per_cent['ВТБ']*money), round(per_cent['СБЕР']*money)]
+deposit_max = max(deposit)
+print(deposit,"\nМаксимум:", deposit_max)

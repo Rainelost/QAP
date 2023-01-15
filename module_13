@@ -23,4 +23,7 @@ while a != 0:
         summa = summa + 1390
         q_guest.pop(0)
         a = a - 1
-print(summa, "руб.")
+        if q_bilet >= 3:
+            summa = summa * 0.9
+print("К оплате", summa, "рублей")
+

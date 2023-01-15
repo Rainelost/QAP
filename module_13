@@ -1,0 +1,24 @@
+q_bilet = int(input("Введите количество билетов:"))
+q_guest = input("Введите возраст гостей через пробел").split()
+q_guest = list(map(int, q_guest))
+summa = 0
+c = 0
+a = 0
+if len(q_guest) > q_bilet or q_bilet > len(q_guest):
+    print("Проверьте правильность заполнения количества гостей или количества билетов")
+# принимаем максимальный возраст человека как 120 лет, я не смог запустить этот код :(
+#if map(q_guest[:])<0 or map(q_guest[:]) > 120:
+    #print("Проверьте правильность ввода возраста")
+if q_bilet > 20:
+    print("Для работы с большим количеством заказов просьба обратиться к организаторам")
+while a != 0:
+    if q_guest[0] < 18:
+        summa = c + 0
+        a = len(q_guest) - 1
+    elif 18 <= q_guest[0] <= 25:
+        summa = c + 990
+        a = len(q_guest) - 1
+    elif 25 < q_guest[0]:
+        summa = c + 1390
+        a = len(q_guest) - 1
+print(summa, "руб.")
